@@ -1,0 +1,148 @@
+:root{
+  --left-keypad-button-width: 60px;
+  --right-keypad-button-width: 60px;
+  --keypad-button-height: 32px;
+  --equal-key-button-width: 153px;
+  --button-padding: 6px 15px;
+  --main-calculator-padding: 15px 20px;
+  --calculator-screen-padding: 10px 15px;
+  --problem-screen-font-size: 30px;
+  --second-screen-font-size: 20px;
+  --button-font-size: 17px;
+  --calculator-screen-bottom-margin: 15px;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+  
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+    background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
+    overflow: hidden;
+  }
+
+  
+  .CalculatorContainer{
+    margin: 10px;
+}
+
+.MainCalculator{
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    padding: var(--main-calculator-padding) ;
+    background: black;
+    box-shadow: 8px -8px 12px 0 rgba(0, 0, 0, 0.3),-12px 12px 16px rgba(255, 255, 255, 0.25);
+    /* background: white; */
+}
+
+.CalculatorScreen2{
+    border-radius: 5px;
+    background-color: rgb(198, 237, 255);
+    margin: 5px;
+    margin-bottom: var(--calculator-screen-bottom-margin);
+    height: 115px;
+}
+
+.CalculatorScreen{
+    padding: var(--calculator-screen-padding) ;
+    height: 100%;
+    border-radius: 5px;
+    background: linear-gradient(-45deg, rgba(0,0,0,0.22), rgba(255,255,255,0.25));
+    box-shadow: -8px -8px 12px 0 rgba(0, 0, 0, 0.3),12px 12px 16px rgba(255, 255, 255, 0.25);
+    overflow-x: hidden;
+}
+#SecondScreen{
+    text-align: right;
+    font-size: var(--second-screen-font-size);
+    position: relative;
+    top: 20px;
+}
+.Brand{
+    float: left;
+    font-style: italic;
+    color: #B7B2B3;
+    font-size: 18px;
+    user-select: none;
+}
+#ProblemScreen{
+    text-align: right;
+    font-size: var(--problem-screen-font-size);
+    position: relative;
+    top: 30px;
+}
+  .CalculatorKeypad{
+    display: flex;
+    flex-direction: row;
+}
+
+.CalculatorKeypad {
+    display: grid;
+    grid-template-columns: repeat(4, 60px);
+    grid-template-rows: repeat(4, 60px);
+    grid-gap: 7px;
+  }
+
+  .CalculatorKeypad button{
+    border: none;
+    outline: none;  
+    border-radius: 45px;
+    background-color:silver;
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .CalculatorKeypad button:hover{
+    opacity: 0.9;
+    width: 63px;
+    height: 63px;
+  }
+
+  #EqualKey{
+    grid-column: span 2;
+    background-color: #36e700;
+    font-weight: bold;
+    color: white;
+    font-size: 35px;
+  }
+  #EqualKey:hover{
+    opacity: 1;
+    width: initial;
+    height: initial;
+  }
+
+  #DevideKey , #MultipicationKey , #MinusKey , #SummessionKey ,#PercentKey, #PowerKey{
+    background-color: blue;
+    color:white;
+  }
+
+  #CeKey , #CKey ,#BackSpaceKey{
+    background-color: red;
+    color: white;
+  }
+
+  #LnKey,#CosKey,#SinInvKey,#EPowerXKey,#eKey,#SinKey,#Log10Key,#TanKey,#TanInvKey,#CosInvKey{
+    background-color: orange;
+  }
+
+  #FactorialKey,#PiKey,#SquereKey,#RootKey{
+    background-color: skyblue;
+  }
+
+  #nPrKey,#nCrKey{
+    background: linear-gradient(85deg, red, orange);
+    color: white;
+  }
+
+  #OpenBracketKey,#CloseBracketKey{
+    background: linear-gradient(-45deg, rgba(0,0,0,0.22), rgba(255,255,255,0.25));
+    box-shadow: -8px -8px 12px 0 rgba(0, 0, 0, 0.3),1px 1px 1px rgba(255, 255, 255, 0.25);
+    color: white;
+  }
